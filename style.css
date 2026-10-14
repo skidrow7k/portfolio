@@ -81,3 +81,58 @@
   .profile-photo { max-width: 100%; margin-top: 26px; }
   .profile-visual img { max-height: 420px; object-position: center 35%; }
 }
+
+/* Experiência profissional */
+.experience { padding-top: 22px; }
+.experience-card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--panel);
+}
+.experience-company { padding: 38px; min-width: 0; }
+.experience-company .eyebrow { color: var(--muted); font-size: 9px; }
+.experience-company h3 {
+  margin: 0 0 28px;
+  font-size: clamp(25px, 2.6vw, 36px);
+  font-weight: 500;
+  letter-spacing: -1.3px;
+  line-height: 1.2;
+}
+.company-transition { display: block; color: var(--lime); font-size: 24px; margin: 14px 0; }
+.company-successor { display: block; color: var(--lime); }
+.experience-company p, .experience-project p { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.experience-company .experience-management { margin: 24px 0 0; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12px; }
+.experience-project { padding: 38px; min-width: 0; border-left: 1px solid var(--line); background: radial-gradient(ellipse at top right, #34432666, transparent 70%); }
+.experience-project-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.experience-label { font-size: 9px; letter-spacing: 1.5px; color: var(--lime); }
+.experience-emblem { color: var(--lime); font-size: 32px; line-height: 1; }
+.experience-project h3 { font-size: clamp(32px, 3.3vw, 46px); margin-bottom: 8px; font-weight: 500; letter-spacing: -1.8px; }
+.experience-project .experience-subtitle { color: var(--text); font-size: 13px; margin-bottom: 24px; }
+.experience-project h4 { font-size: 11px; font-weight: 500; letter-spacing: 1px; margin: 26px 0 14px; }
+.experience-contributions { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; padding: 0; margin: 0 0 28px; }
+.experience-contributions li { border: 1px solid #465239; border-radius: 30px; padding: 9px 13px; font-size: 11px; color: var(--text); }
+.experience-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; border-top: 1px solid #465239; color: var(--lime); font-size: 12px; line-height: 1.6; }
+.experience-link:hover { color: #e0ff93; }
+.experience-link > span[aria-hidden] { font-size: 23px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) {
+  .experience-company, .experience-project { padding: 28px; }
+}
+@media (max-width: 900px) {
+  .header { height: 78px; }
+  .header-cta { margin-left: auto; margin-right: 20px; }
+  .menu-toggle { display: block; background: none; color: var(--text); border: 0; font-size: 24px; cursor: pointer; }
+  .header nav { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--panel); padding: 24px 6%; z-index: 10; border-bottom: 1px solid var(--line); flex-direction: column; gap: 20px; }
+  .header nav.open { display: flex; }
+}
+@media (max-width: 650px) {
+  .experience { padding-top: 0; }
+  .experience-card { grid-template-columns: 1fr; }
+  .experience-company, .experience-project { padding: 24px; }
+  .experience-project { border-left: 0; border-top: 1px solid var(--line); }
+  .experience-company p, .experience-project p { font-size: 13px; }
+  .experience-contributions li { font-size: 10px; }
+}
